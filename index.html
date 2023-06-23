@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>CRUD</title>
+</head>
+
+
+
+    <body>
+        <div class="crud">
+            <div id="scroll" onclick="getScroll()">
+                <div class="arrow"></div>
+            </div>
+<!--Start form content -->
+            <div class="inputs">
+                <h2>Information Form</h2>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input class="form-control" type="text" id="name">
+                    <label>Age</label>
+                    <input class="form-control" type="number" id="age">
+                    <label>Salary</label>
+                    <input class="form-control" type="text" id="salary">
+                    <label>Email</label>
+                    <input class="form-control" type="email" id="email">
+                    <label>Contact Number</label>
+                    <input class="form-control" type="number" id="number">
+                    <button id="submit">Create</button>
+                </div>
+            </div>
+<!--End form content -->
+<!--Start table -->
+            <div class="outputs">
+                <h2>Information Table</h2>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Salary</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                    </tr>
+                    <tbody id="tbody">
+<!-- bring data from main.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!--End table -->
+
+
+
+
+
+
+
+
+
+        <script src="main.js"></script>
+    </body>
+
+</html>

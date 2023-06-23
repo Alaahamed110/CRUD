@@ -1,0 +1,140 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #efa90c;
+    --secondary-color:#efa70c77;
+    --text-color:#fff;
+    --background-color:#11243b,#769d9e;
+    --border-color:#efa70c4d;
+}
+body{
+    background-image: linear-gradient(to top left, var(--background-color));
+    font-family: 'Play', sans-serif;
+    color: var(--text-color);
+}
+.crud{
+    border: 2px solid var(--main-color);
+    margin: 20px;
+    padding: 30px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns:repeat(3, 1fr) ;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 30px;
+    width: 80%;
+}
+.crud h2{
+    margin:15px;
+    text-align: center;
+}
+/* Start form content */
+.inputs label{
+    margin-top: 30px ;
+}
+.inputs input ,.inputs button{
+    outline: 0;
+    border: 0;
+    padding: 10px;
+    margin-top:5px ;
+}
+.inputs  input{
+    background-color: #b8b8b8;
+    border-radius: 10px;
+    transition: .3s;
+}
+.form-group input:focus{
+    background-color: #769d9ea8;
+    border: 1px solid #efa70c77;
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+.inputs button{
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    margin: 10px;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--text-color);
+    margin: 20px auto;
+}
+.inputs button:hover{
+    background-color: #c08913;
+    letter-spacing: 1px;
+}
+/* End form content */
+/* Start table  */
+.outputs{
+    text-align: center;
+    grid-column: 2/4;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+    border-bottom: 3px solid var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+table th{
+    text-transform: uppercase;
+}
+table td{
+    padding: 5px;
+    border-right:  1px solid var(--border-color);
+    border-top:  1px solid var(--border-color);
+    border-radius: 5px;
+    text-align: center;
+}
+table tr:nth-child(even){
+    background-color: #769d9e2d;
+} 
+th,td{
+    padding: 10pxpx;
+}
+#update,#delete{
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #efa70c77;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 100;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* End table  */
+
+/*Start scroll */
+#scroll{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #efa70c1f;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    border-radius: 50%;
+    border: 1px solid var(--main-color); 
+    cursor: pointer;
+}
+.arrow{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 6px dotted ;
+    border-color: transparent transparent var(--main-color) transparent ;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+}
+/*End scroll */
